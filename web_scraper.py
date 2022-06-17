@@ -1,7 +1,6 @@
 #! I really like a multi-colored file (:-)
 
 #Importing relevant modules
-from asyncore import read
 import webbrowser as wb
 import requests, os
 import pyttsx3 as pt
@@ -28,7 +27,7 @@ import bs4
 
 
 def get_webpage():          #open web page and scraping function
-    res = requests.get('http://nostarch.com/')
+    res = requests.get('https://www.wikipedia.com')
     type(res)
     
     #Error handling
@@ -38,7 +37,7 @@ def get_webpage():          #open web page and scraping function
     except Exception as ex:
         print('DOWNLOAD FAILED %s' % (ex))
     
-    #len(res.text)
+  
 
     print(res.text[:])
     
@@ -53,7 +52,7 @@ def get_webpage():          #open web page and scraping function
 
 
     #Store the returned object to the variable 
-    #parseTree
+    #parseText
     #parseText = bs4.BeautifulSoup(res.text)
     #type(parseText)
 
